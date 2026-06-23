@@ -75,6 +75,9 @@ npm install
 # Run development server
 npm run dev
 
+# Run development server for other devices on the same network
+npm run dev:host
+
 # Build for production
 npm run build
 
@@ -84,6 +87,28 @@ npm run preview
 # Run tests
 npm test
 ```
+
+## Access from Phone, Tablet, or Another PC
+
+Use the app on your private network with a local-only link:
+
+`http://<your-local-ip>:5173`
+
+Example:
+
+`http://192.168.1.23:5173`
+
+### Steps
+
+1. Open a terminal in `/home/runner/work/Offshore-Access-Control-Management/Offshore-Access-Control-Management`.
+2. Install dependencies with `npm install`.
+3. Start the LAN-accessible development server with `npm run dev:host`.
+4. Find your computer's local IP address:
+   - Windows: `ipconfig`
+   - macOS/Linux: `ifconfig` or `ip a`
+5. Keep the development server running.
+6. On your phone, tablet, or another PC connected to the same Wi-Fi or local network, open `http://<your-local-ip>:5173`.
+7. If the page does not open, allow Node.js/Vite through your firewall and try again.
 
 ## Project Structure
 
